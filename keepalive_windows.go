@@ -1,23 +1,29 @@
 package tcpkeepalive
 
 import (
-	// "os"
-	// "syscall"
-	"time"
-	// "unsafe"
+// "os"
+// "syscall"
+// "time"
+// "unsafe"
 )
 
-func setIdle(c *Conn, secs int) error {
-	c.TCPConn.SetKeepAlivePeriod(time.Duration(secs) * time.Second)
+func setTcpUsertimeout(fd int, secs int) error {
+
+	return nil
+}
+func setIdle(fd int, secs int) error {
 	return nil
 }
 
-func setCount(c *Conn, n int) error {
-	// return os.NewSyscallError("setsockopt", syscall.SetsockoptInt(fd, syscall.IPPROTO_TCP, syscall.TCP_KEEPCNT, n))
+func setCount(fd int, n int) error {
 	return nil
 }
 
-func setInterval(c *Conn, secs int) error {
-	// return os.NewSyscallError("setsockopt", syscall.SetsockoptInt(fd, syscall.IPPROTO_TCP, syscall.TCP_KEEPINTVL, secs))
+func setInterval(fd int, secs int) error {
 	return nil
+}
+
+func setNonblock(fd int) error {
+	return nil
+
 }
